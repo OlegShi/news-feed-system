@@ -85,7 +85,6 @@ News feed is built by reading post IDs from cache and hydrating with full user/p
 ```mermaid
 flowchart TD
     User["👤 User<br/>Web browser | Mobile app"]
-    CDN["☁️ CDN"]
     LB["⚖️ Load Balancer"]
     WS["🖥️ Web Servers"]
     Auth["Authentication<br/>Rate Limiting"]
@@ -107,7 +106,6 @@ flowchart TD
     PC -.->|"cache miss"| PDB
     NFS -->|"⑥ return hydrated feed (JSON)"| WS
     WS --> LB --> User
-    User --> CDN
 
     style LB fill:#1877f2,stroke:#1565c0,color:#fff
     style WS fill:#e8f5e9,stroke:#43a047
