@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f0f2f5;
+  color: #1c1e21;
+}
+
+/* Auth */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.auth-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.auth-form h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #1877f2;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth-form button:hover {
+  background-color: #166fe5;
+}
+
+.auth-form .switch-link {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.auth-form .switch-link a {
+  color: #1877f2;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.error-message {
+  color: #dc3545;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.success-message {
+  color: #28a745;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Layout */
+.layout {
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar h1 {
+  color: #1877f2;
+  font-size: 1.5rem;
+}
+
+.navbar .user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar .user-info span {
+  font-weight: 600;
+}
+
+.navbar button {
+  padding: 0.5rem 1rem;
+  background-color: #e4e6eb;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.navbar button:hover {
+  background-color: #d8dadf;
+}
+
+/* Main Content */
+.main-content {
+  max-width: 1100px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 1.5rem;
+}
+
+/* Post Form */
+.post-form {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #dddfe2;
+  border-radius: 20px;
+  font-size: 1rem;
+  resize: none;
+  font-family: inherit;
+  min-height: 60px;
+}
+
+.post-form textarea:focus {
+  outline: none;
+  border-color: #1877f2;
+}
+
+.post-form button {
+  margin-top: 0.75rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  float: right;
+}
+
+.post-form button:hover {
+  background-color: #166fe5;
+}
+
+.post-form button:disabled {
+  background-color: #a0c4f4;
+  cursor: not-allowed;
+}
+
+/* Post Card */
+.post-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post-card .post-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-card .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #1877f2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.post-card .post-meta .username {
+  font-weight: 600;
+}
+
+.post-card .post-meta .timestamp {
+  font-size: 0.8rem;
+  color: #65676b;
+}
+
+.post-card .post-content {
+  font-size: 1rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+/* Friends */
+.friends-panel {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  position: sticky;
+  top: 70px;
+}
+
+.friends-panel h3 {
+  margin-bottom: 1rem;
+  color: #65676b;
+  font-size: 1.1rem;
+}
+
+.add-friend-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.add-friend-form input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.add-friend-form button {
+  padding: 0.5rem 1rem;
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.friend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.friend-item:last-child {
+  border-bottom: none;
+}
+
+.friend-item .avatar-small {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #42b72a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.empty-feed {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #65676b;
+}
+
+.empty-feed p {
+  margin-top: 0.5rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #65676b;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+}
