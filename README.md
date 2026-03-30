@@ -1,6 +1,6 @@
 # 📰 News Feed System
 
-A scalable news feed system designed for **10 million DAU**, supporting feed publishing with fanout-on-write and real-time news feed retrieval. Built with **Python/FastAPI**, **React**, **MongoDB**, **Redis**, **Kafka**, and **Neo4j**.
+A scalable news feed system designed for **millions of DAU**, supporting feed publishing with fanout-on-write and real-time news feed retrieval. Built with **Python/FastAPI**, **React**, **MongoDB**, **Redis**, **Kafka**, and **Neo4j**.
 
 ---
 
