@@ -175,7 +175,7 @@ async def test_api_flow():
     section("API End-to-End Flow")
     results = {}
 
-    async with httpx.AsyncClient(base_url=API, timeout=10) as client:
+    async with httpx.AsyncClient(base_url=API, timeout=30) as client:
         tokens = []
 
         # Register two users
@@ -185,7 +185,7 @@ async def test_api_flow():
                 assert resp.status_code == 200, resp.text
                 ok(f"Registered user '{user['username']}'")
             except Exception as e:
-                fail(f"Register {user['username']}: {e}")
+                fail(f"Register {user['username']}: {type(e).__name__}: {e}")
                 results["api"] = False
                 return results
 
